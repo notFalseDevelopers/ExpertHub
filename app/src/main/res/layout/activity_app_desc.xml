@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/black"
+    android:outlineSpotShadowColor="@android:color/holo_blue_dark"
+    tools:context=".AppDesc">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/baloo_tamma"
+        android:text="About App"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/aboutAppTitle"
+        android:textStyle="bold"
+        />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:fontFamily="@font/baloo_tamma"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/aboutAppTitle"
+        android:layout_marginTop="50dp"
+        android:textColor="@color/white"
+        android:text="This app allows you to put out and showcase any kind of skillset that you have. All your expertise, skills and abilities that you would like to generate revenue with, i.e Offering your services to the community with your expertise."
+        android:textSize="20sp"
+        android:gravity="center"
+        android:id="@+id/appDesc"
+        />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appDesc"
+        android:textColor="@android:color/holo_blue_dark"
+        android:text="Hey who knows, you can create your own career with just your abilities"
+        android:padding="5dp"
+        android:gravity="center"
+        android:fontFamily="@font/baloo_tamma"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:id="@+id/descSupport"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/descSupport"
+        app:strokeWidth="3dp"
+        app:strokeColor="@android:color/holo_blue_dark"
+        app:cornerRadius="9dp"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:hint="Ok, Got it"
+        android:textColorHint="@color/white"
+        android:fontFamily="@font/baloo_tamma"
+        android:id="@+id/gotItButton"
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

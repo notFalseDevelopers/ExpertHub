@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    tools:context=".Dashboard">
+
+    <LinearLayout
+        android:id="@+id/appBar"
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_marginTop="3dp"
+            android:id="@+id/appCompatImageView"
+            android:layout_width="70dp"
+            android:layout_height="45dp"
+            android:src="@drawable/ic_baseline_notifications_24"
+            app:layout_constraintStart_toStartOf="parent"
+            android:tint="@android:color/holo_blue_dark"
+            />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:layout_height="wrap_content"
+
+            android:text="ExpertHub"
+            android:textColor="@android:color/white"
+            android:fontFamily="@font/baloo_tamma"
+            android:textSize="30sp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:id="@+id/appTitle"
+            />
+
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_baseline_menu_24"
+
+            android:layout_marginLeft="50dp"
+            android:tint="@android:color/holo_blue_dark"
+            />
+
+
+
+    </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_below="@id/appBar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/DashboardRecycler"
+            />
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="logout"
+            android:textColor="@color/white"
+            android:id="@+id/logout"
+            />
+
+
+
+</RelativeLayout>

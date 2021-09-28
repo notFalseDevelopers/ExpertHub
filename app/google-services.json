@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "161452809633",
+    "project_id": "experthub-b293a",
+    "storage_bucket": "experthub-b293a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:161452809633:android:29788d5f105199b1af3fe0",
+        "android_client_info": {
+          "package_name": "com.inchub.experthub"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "161452809633-1b2jjq7i87r1p2dtu2ig9nsm37n357g8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDUzfOaIpLDdHZMOkQ--sjoICpLUhviWco"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "161452809633-1b2jjq7i87r1p2dtu2ig9nsm37n357g8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
