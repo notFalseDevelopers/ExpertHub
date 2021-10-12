@@ -1,6 +1,5 @@
 package com.inchub.experthub.Adapters;
 
-import android.app.LauncherActivity;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,7 +10,6 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.widget.AppCompatTextView;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.inchub.experthub.Classes.SkillsAdvert;
 import com.inchub.experthub.Classes.skillAd;
 import com.inchub.experthub.R;
 import com.squareup.picasso.Picasso;
@@ -43,9 +41,8 @@ public class RecAdapter extends RecyclerView.Adapter<RecAdapter.ViewHolder> {
 
         holder.PhoneNo.setText(skillsAdvertList.get(position).getPhoneNo());
         holder.WorkDesc.setText(skillsAdvertList.get(position).getWorkDesc());
-        holder.JobCount.setText(skillsAdvertList.get(position).getJobCount());
         holder.Location.setText(skillsAdvertList.get(position).getLocation());
-        Picasso.get().load(skillsAdvertList.get(position).getUri()).into(holder.pic);
+        Picasso.get().load(skillsAdvertList.get(position).getPic()).into(holder.pic);
 
     }
 
@@ -56,7 +53,7 @@ public class RecAdapter extends RecyclerView.Adapter<RecAdapter.ViewHolder> {
 
     public class ViewHolder extends RecyclerView.ViewHolder{
 
-        AppCompatTextView WorkDesc, PhoneNo, Location, JobCount;
+        AppCompatTextView WorkDesc, PhoneNo, Location;
         ImageView pic;
 
         public ViewHolder(@NonNull View itemView) {
@@ -65,7 +62,6 @@ public class RecAdapter extends RecyclerView.Adapter<RecAdapter.ViewHolder> {
             WorkDesc = itemView.findViewById(R.id.cv_workDesc);
             PhoneNo = itemView.findViewById(R.id.cv_phoneNum);
             Location = itemView.findViewById(R.id.cv_location);
-            JobCount = itemView.findViewById(R.id.cv_jobCount);
             pic = itemView.findViewById(R.id.profilePicCard);
 
         }

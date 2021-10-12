@@ -42,10 +42,11 @@
 
 
         <androidx.appcompat.widget.AppCompatImageView
+            android:onClick="popLoginMenu"
             android:layout_width="70dp"
             android:layout_height="50dp"
             android:src="@drawable/ic_baseline_menu_24"
-
+            android:id="@+id/pop_menu_btn"
             android:layout_marginLeft="50dp"
             android:tint="@android:color/holo_blue_dark"
             />
@@ -60,15 +61,42 @@
             android:layout_height="match_parent"
             android:id="@+id/DashboardRecycler"
             />
-        <com.google.android.material.radiobutton.MaterialRadioButton
-            android:visibility="gone"
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="35dp"
+        android:layout_alignParentEnd="true">
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/newAdvert"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="logout"
-            android:textColor="@color/white"
-            android:id="@+id/logout"
-            />
+            android:src="@drawable/add"
+            android:backgroundTint="@android:color/holo_blue_dark"/>
 
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="100dp"
+        android:layout_marginRight="35dp"
+        android:layout_alignParentEnd="true">
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/close"
+            android:backgroundTint="@android:color/holo_blue_dark"/>
+
+    </RelativeLayout>
 
 
 </RelativeLayout>

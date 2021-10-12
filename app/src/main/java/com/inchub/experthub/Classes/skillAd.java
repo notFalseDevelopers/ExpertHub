@@ -2,63 +2,61 @@ package com.inchub.experthub.Classes;
 
 public class skillAd {
 
-    private String phoneNo, workDesc, location, jobCount, Uri, advertId;
+    private String PhoneNo;
+    private String WorkDesc;
+    private String Location;
+    private String pic;
+    private String userId;
 
-    public skillAd(String phoneNo, String workDesc, String location, String jobCount, String advertId, String uri) {
-        this.phoneNo = phoneNo;
-        this.workDesc = workDesc;
-        this.location = location;
-        this.jobCount = jobCount;
-        this.Uri = uri;
-        this.advertId = advertId;
+    public skillAd() {
     }
 
-    public void setAdvertId(String advertId){this.advertId = advertId;}
-
-    public String getAdvertId(){return advertId;}
+    public skillAd(String phoneNo, String workDesc, String location, String pic, String userId) {
+        PhoneNo = phoneNo;
+        WorkDesc = workDesc;
+        Location = location;
+        this.pic = pic;
+        this.userId = userId;
+    }
 
     public String getPhoneNo() {
-        return phoneNo;
+        return PhoneNo;
     }
 
     public void setPhoneNo(String phoneNo) {
-        this.phoneNo = phoneNo;
+        PhoneNo = phoneNo;
     }
 
     public String getWorkDesc() {
-        return workDesc;
+        return WorkDesc;
     }
 
     public void setWorkDesc(String workDesc) {
-        this.workDesc = workDesc;
+        WorkDesc = workDesc;
+    }
+
+
+    public String getUserId(){
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 
     public String getLocation() {
-        return location;
+        return Location;
     }
 
     public void setLocation(String location) {
-        this.location = location;
+        Location = location;
     }
 
-    public String getJobCount() {
-        return jobCount;
+    public String getPic() {
+        return pic;
     }
 
-    public void setJobCount(String jobCount) {
-        this.jobCount = jobCount;
+    public void setPic(String pic) {
+        this.pic = pic;
     }
-
-    public String getUri() {
-        return Uri;
-    }
-
-    public void setUri(String uri) {
-        Uri = uri;
-    }
-
-
-
-
-
 }

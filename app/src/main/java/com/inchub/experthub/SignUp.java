@@ -104,6 +104,7 @@ public class SignUp extends AppCompatActivity {
                             }
                         });
                         startActivity(new Intent(getApplicationContext(), ExpertiseProfileCreate.class));
+                        finish();
                     }
                 }).addOnFailureListener(new OnFailureListener() {
                     @Override
