@@ -45,7 +45,7 @@ public class ExpertiseProfileCreate extends AppCompatActivity {
 
     MaterialTextView banner;
     FirebaseStorage storage;
-    String userid,itemId;
+    String userid,itemId,retrievedUsername;
     CircleImageView profilePhoto;
     private Uri filePath;
     private String adId;
@@ -71,6 +71,7 @@ public class ExpertiseProfileCreate extends AppCompatActivity {
                 if (value.exists())
                 {
                     banner.setText("Welcome "+value.getString("username"));
+                    retrievedUsername= value.getString("username");
                 }
             }
         });
@@ -157,7 +158,7 @@ public class ExpertiseProfileCreate extends AppCompatActivity {
                     {
                         String productID;
                         productID = UUID.randomUUID().toString();
-                        skillAd skillAdvert = new skillAd(phoneNumber.getText().toString().trim(),workDesc.getText().toString().trim(),locationField.getText().toString().trim(),null,productID);
+                        skillAd skillAdvert = new skillAd(phoneNumber.getText().toString().trim(),workDesc.getText().toString().trim(),locationField.getText().toString().trim(),null,productID,retrievedUsername.trim());
 
                         FirebaseFirestore.getInstance().collection("skillsAdvert").add(skillAdvert)
                                 .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {

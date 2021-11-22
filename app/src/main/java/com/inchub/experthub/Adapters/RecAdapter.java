@@ -42,6 +42,7 @@ public class RecAdapter extends RecyclerView.Adapter<RecAdapter.ViewHolder> {
         holder.PhoneNo.setText(skillsAdvertList.get(position).getPhoneNo());
         holder.WorkDesc.setText(skillsAdvertList.get(position).getWorkDesc());
         holder.Location.setText(skillsAdvertList.get(position).getLocation());
+        holder.name.setText(skillsAdvertList.get(position).getName());
         Picasso.get().load(skillsAdvertList.get(position).getPic()).into(holder.pic);
 
     }
@@ -53,7 +54,7 @@ public class RecAdapter extends RecyclerView.Adapter<RecAdapter.ViewHolder> {
 
     public class ViewHolder extends RecyclerView.ViewHolder{
 
-        AppCompatTextView WorkDesc, PhoneNo, Location;
+        AppCompatTextView WorkDesc, PhoneNo, Location, name;
         ImageView pic;
 
         public ViewHolder(@NonNull View itemView) {
@@ -63,6 +64,7 @@ public class RecAdapter extends RecyclerView.Adapter<RecAdapter.ViewHolder> {
             PhoneNo = itemView.findViewById(R.id.cv_phoneNum);
             Location = itemView.findViewById(R.id.cv_location);
             pic = itemView.findViewById(R.id.profilePicCard);
+            name = itemView.findViewById(R.id.cv_name);
 
         }
     }

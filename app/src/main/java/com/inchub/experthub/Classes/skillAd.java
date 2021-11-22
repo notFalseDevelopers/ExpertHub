@@ -7,17 +7,27 @@ public class skillAd {
     private String Location;
     private String pic;
     private String userId;
+    private String name;
+
 
     public skillAd() {
     }
 
-    public skillAd(String phoneNo, String workDesc, String location, String pic, String userId) {
+    public skillAd(String phoneNo, String workDesc, String location, String pic, String userId, String name) {
         PhoneNo = phoneNo;
         WorkDesc = workDesc;
         Location = location;
+        this.name = name;
         this.pic = pic;
         this.userId = userId;
     }
+
+
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) { this.name = name; }
+
 
     public String getPhoneNo() {
         return PhoneNo;

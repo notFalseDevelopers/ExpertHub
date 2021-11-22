@@ -3,6 +3,7 @@ package com.inchub.experthub;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatImageView;
+import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -33,8 +34,10 @@ public class Dashboard extends AppCompatActivity implements PopupMenu.OnMenuItem
 
     AppCompatImageView pop_menu_btn;
     FloatingActionButton logoutBtn;
+    AppCompatImageView menu;
     FloatingActionButton newAdvert;
     private RecyclerView advertsRecycler;
+    View v;
     List<skillAd> skillAdList = new ArrayList<>();
 
     RecAdapter recAdapter;
@@ -46,6 +49,7 @@ public class Dashboard extends AppCompatActivity implements PopupMenu.OnMenuItem
 
         logoutBtn = findViewById(R.id.logout);
         newAdvert = findViewById(R.id.newAdvert);
+        menu = findViewById(R.id.pop_menu_btn);
         pop_menu_btn = findViewById(R.id.pop_menu_btn);
 
         /*pop_menu_btn.setOnClickListener(new View.OnClickListener() {
@@ -68,6 +72,16 @@ public class Dashboard extends AppCompatActivity implements PopupMenu.OnMenuItem
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getApplicationContext(), ExpertiseProfileCreate.class));
+            }
+        });
+
+        menu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                menuSheet menuSheet = new menuSheet();
+                menuSheet.show(getSupportFragmentManager(), "menu sheet");
+
             }
         });
 
@@ -118,29 +132,11 @@ public class Dashboard extends AppCompatActivity implements PopupMenu.OnMenuItem
         advertsRecycler = findViewById(R.id.DashboardRecycler);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext(), RecyclerView.VERTICAL, false);
         advertsRecycler.setLayoutManager(layoutManager);
-//skillAd(String phoneNo, String workDesc, String jobCount, String location, String pic,String userId)
-        /*
-        skillAdList.add(new skillAd("0152996113", "FAS", "MP", "https://securecontent.jackyselectronics.com/Images/product-images/b143feb8-e210-72b0-ff90-f41acaeffa29.jpg", null));
-        skillAdList.add(new skillAd("0152996114", "TECH", "LTT", "https://securecontent.jackyselectronics.com/Images/product-images/b143feb8-e210-72b0-ff90-f41acaeffa29.jpg", null));
-        skillAdList.add(new skillAd("0152996115", "HAIR", "THYND", "https://image.makewebeasy.net/makeweb/0/PevRXTY8V/DefaultData/001_note20series_productimage_mo_720.jpg", null));
-        skillAdList.add(new skillAd("0152996116", "NAILS", "TZN", "https://securecontent.jackyselectronics.com/Images/product-images/b143feb8-e210-72b0-ff90-f41acaeffa29.jpg", null));
-        skillAdList.add(new skillAd("0152996117", "CARPENTRY", "PLK", "https://image.makewebeasy.net/makeweb/0/PevRXTY8V/DefaultData/001_note20series_productimage_mo_720.jpg", null));
-        skillAdList.add(new skillAd("0152996118", "FAS", "MSN", "https://securecontent.jackyselectronics.com/Images/product-images/b143feb8-e210-72b0-ff90-f41acaeffa29.jpg", null));
-        skillAdList.add(new skillAd("0152996119", "FAS", "PTA", "https://image.makewebeasy.net/makeweb/0/PevRXTY8V/DefaultData/001_note20series_productimage_mo_720.jpg", null));
-        skillAdList.add(new skillAd("0152996112", "FAS", "CPT", "https://securecontent.jackyselectronics.com/Images/product-images/b143feb8-e210-72b0-ff90-f41acaeffa29.jpg", null));
-        skillAdList.add(new skillAd("0152996112", "FAS",  "DBN", "https://image.makewebeasy.net/makeweb/0/PevRXTY8V/DefaultData/001_note20series_productimage_mo_720.jpg", null));
-        skillAdList.add(new skillAd("0152996112", "FAS", "LTT", "https://securecontent.jackyselectronics.com/Images/product-images/b143feb8-e210-72b0-ff90-f41acaeffa29.jpg", null));
-*/
-
-
-
         recAdapter = new RecAdapter(skillAdList, getApplicationContext());
         advertsRecycler.setAdapter(recAdapter);
         advertsRecycler.setHasFixedSize(true);
 
     }
-
-
     public void popLoginMenu(View view) {
         PopupMenu popupMenu = new PopupMenu(getApplicationContext(), view);
         popupMenu.setOnMenuItemClickListener(this);
